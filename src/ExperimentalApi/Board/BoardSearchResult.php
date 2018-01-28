@@ -6,7 +6,7 @@
  * Time: 04:13
  */
 
-namespace JiraGreenhopperRestApi\Board;
+namespace JiraGreenhopperRestApi\ExperimentalApi\Board;
 
 
 class BoardSearchResult implements \JsonSerializable

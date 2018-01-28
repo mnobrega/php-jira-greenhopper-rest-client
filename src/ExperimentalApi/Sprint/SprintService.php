@@ -6,7 +6,7 @@
  * Time: 01:04
  */
 
-namespace JiraGreenhopperRestApi\Sprint;
+namespace JiraGreenhopperRestApi\ExperimentalApi\Sprint;
 
 use JiraGreenhopperRestApi\JiraClient;
 

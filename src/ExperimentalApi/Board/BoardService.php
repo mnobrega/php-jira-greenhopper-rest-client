@@ -6,18 +6,18 @@
  * Time: 00:50
  */
 
-namespace JiraGreenhopperRestApi\Board;
+namespace JiraGreenhopperRestApi\ExperimentalApi\Board;
 
 use JiraGreenhopperRestApi\JiraClient;
-use JiraGreenhopperRestApi\Sprint\SprintSearchResult;
+use JiraGreenhopperRestApi\ExperimentalApi\Sprint\SprintSearchResult;
 
 class BoardService extends JiraClient
 {
-    private $uri = '/board';
+    private $uri = 'experimental-api/1.0/board';
 
     /**
      * @param array $paramArray
-     * @return object
+     * @return BoardSearchResult|object
      * @throws \JiraGreenhopperRestApi\JiraException
      * @throws \JsonMapper_Exception
      */

@@ -34,7 +34,7 @@ class JiraClient
      *
      * @var string
      */
-    private $api_uri = '/rest/greenhopper/experimental-api';
+    private $api_uri = '/rest/greenhopper';
 
     /**
      * CURL instance.
@@ -81,7 +81,7 @@ class JiraClient
         $this->configuration = $configuration;
         $this->json_mapper = new \JsonMapper();
 
-        // Fix "\JiraAgileRestApi\JsonMapperHelper::class" syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+        // Fix "\JiraGreenhopperRestApi\JsonMapperHelper::class" syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
         $this->json_mapper->undefinedPropertyHandler = [new JsonMapperHelper(), 'setUndefinedProperty'];
 
         // create logger
@@ -418,8 +418,7 @@ class JiraClient
     protected function createUrlByContext($context)
     {
         $host = $this->getConfiguration()->getJiraHost();
-
-        return $host.$this->api_uri.'/'.preg_replace('/\//', '', $context, 1);
+        return $host.$this->api_uri.'/'.$context;
     }
 
     /**

@@ -6,7 +6,7 @@
  * Time: 04:08
  */
 
-namespace JiraGreenhopperRestApi\Sprint;
+namespace JiraGreenhopperRestApi\ExperimentalApi\Sprint;
 
 
 class SprintSearchResult implements \JsonSerializable
@@ -15,8 +15,6 @@ class SprintSearchResult implements \JsonSerializable
     public $maxResults;
     /** @var integer */
     public $startAt;
-    /** @var boolean */
-    public $isLast;
     /** @var Sprint[]|null */
     public $values;
 

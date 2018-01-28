@@ -6,7 +6,7 @@
  * Time: 00:32
  */
 
-namespace JiraGreenhopperRestApi\Sprint;
+namespace JiraGreenhopperRestApi\ExperimentalApi\Sprint;
 
 
 class Sprint implements \JsonSerializable
@@ -23,8 +23,6 @@ class Sprint implements \JsonSerializable
     public $startDate;
     /** @var string|null */
     public $endDate;
-    /** @var integer */
-    public $originBoardId;
     /** @var string */
     public $completeDate;
 

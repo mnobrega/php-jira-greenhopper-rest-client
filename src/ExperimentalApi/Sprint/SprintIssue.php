@@ -6,7 +6,7 @@
  * Time: 01:10
  */
 
-namespace JiraGreenhopperRestApi\Sprint;
+namespace JiraGreenhopperRestApi\ExperimentalApi\Sprint;
 
 
 class SprintIssue implements \JsonSerializable

@@ -17,6 +17,7 @@ Session.vim
 .netrwhist
 *~
 .idea/
+*jira-rest-client.log
 
 composer.lock
 config.php

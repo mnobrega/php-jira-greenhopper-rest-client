@@ -7,7 +7,7 @@
  */
 
 namespace JiraGreenhopperRestApi;
-use JiraGreenhopperRestApi\Board\BoardService;
+use JiraGreenhopperRestApi\ExperimentalApi\Board\BoardService;
 use JiraGreenhopperRestApi\Configuration\DotEnvConfiguration;
 
 require_once(__DIR__.'/../vendor/autoload.php');
@@ -19,10 +19,10 @@ try {
 
     // TEST get All Boards
     $boards = $boardService->getAllBoards();
-    dd($boards);
+    dump($boards);
 
     // TEST get board sprints
-    $boardSprints = $boardService->getSprints($boards[0]->id);
+    $boardSprints = $boardService->getSprints($boards->values[0]->id);
     dump($boardSprints);
 
 } catch (\Exception $e) {
