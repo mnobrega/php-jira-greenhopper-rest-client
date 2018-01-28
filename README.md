@@ -1,4 +1,4 @@
-# PHP JIRA Agile Rest Client
+# PHP JIRA Greenhopper Rest Client
 
 # Requirements
 

@@ -21,7 +21,7 @@ Session.vim
 composer.lock
 config.php
 config.jira.json
-jira-agile-rest-client.log
+jira-greenhopper-rest-client.log
 screen_capture.png
 bug-description.pdf
 
