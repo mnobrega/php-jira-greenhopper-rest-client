@@ -31,6 +31,7 @@ class BoardService extends JiraClient
     }
 
     /**
+     * Notes: The query param maxResults is always < 50
      * @param $boardId
      * @param array $paramArray
      * @return object
@@ -39,11 +40,10 @@ class BoardService extends JiraClient
      */
     public function getSprints($boardId, $paramArray = [])
     {
-        $sprintSearchResult = new SprintSearchResult();
         $ret = $this->exec($this->uri.'/'.$boardId.'/sprint'.$this->toHttpQueryParameter($paramArray), null);
         $this->log->addInfo("Result=\n".$ret);
         return $this->json_mapper->map(
-            json_decode($ret), $sprintSearchResult
+            json_decode($ret), new SprintSearchResult()
         );
     }
 }

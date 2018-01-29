@@ -19,6 +19,8 @@ class Board implements \JsonSerializable
     public $name;
     /** @var string */
     public $type;
+    /** @var integer */
+    public $filterId;
 
     public function jsonSerialize()
     {

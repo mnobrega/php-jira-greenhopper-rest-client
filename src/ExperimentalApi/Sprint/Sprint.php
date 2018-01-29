@@ -11,6 +11,10 @@ namespace JiraGreenhopperRestApi\ExperimentalApi\Sprint;
 
 class Sprint implements \JsonSerializable
 {
+    const STATE_CLOSED = 'closed';
+    const STATE_FUTURE = 'future';
+    const STATE_ACTIVE = 'active';
+
     /** @var integer */
     public $id;
     /** @var string */
